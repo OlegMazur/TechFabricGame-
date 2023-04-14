@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="src/styles/styles.css" rel="stylesheet" type="text/css" />
+    <title>Clicker Game</title>
+  </head>
+  <body>
+    <main>
+      <section id="registration" class="registration">
+        <h1>Register</h1>
+        <form class="registration__form">
+          <div>
+            <label for="name">Name </label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <button type="submit">Start Game</button>
+        </form>
+      </section>
+      <section id="game" class="game" style="display: none">
+        <div class="info">
+          <div class="info__name">
+            <span>Clicker Game</span>
+          </div>
+          <div class="score-block">
+            <div>Score: <span id="score">0</span></div>
+            <div>Level: <span id="level">1</span></div>
+            <div>Target Clicks: <span id="target-clicks">10</span></div>
+            <div>Clicks: <span id="clicks">0</span></div>
+          </div>
+        </div>
+        <div class="arena">
+          <div class="your-avatar">
+            <div class="avatar__title">You</div>
+            <img class="avatar__img" src="https://media.giphy.com/media/kdHa4JvihB2gM/giphy.gif" alt="avatar" />
+          </div>
+          <div class="enemy-avatar" id="enemy-avatar">
+            <div class="avatar__title">Enemy</div>
+            <img
+              id="click-btn"
+              class="avatar__img"
+              src="https://media.giphy.com/media/kdHa4JvihB2gM/giphy.gif"
+              alt="enemy-avatar"
+            />
+          </div>
+        </div>
+
+        <div id="modal-window" class="modal-window" style="display: none">
+          <div id="message"></div>
+          <button id="restart-btn" class="restart-btn" style="display: none">Restart game</button>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
